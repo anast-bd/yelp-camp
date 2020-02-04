@@ -1,0 +1,20 @@
+.thumbnail img {
+	width: 100%;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 1em;
+}
+
+.delete-form {
+	display: inline;
+}
+
+.footer {
+	z-index: 1;
+	padding: 0 0 10px 10px;
+}
