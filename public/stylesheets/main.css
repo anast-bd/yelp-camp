@@ -1,3 +1,25 @@
+.navbar-brand {
+	font-family: 'Montserrat';
+}
+
+.form-header{
+	text-align: center;
+	padding: 25px;
+	font-size: 1.3rem;
+	font-style: bold;
+	font-family: 'Montserrat';
+}
+
+.form-header__logo  {
+	font-size: 4.3rem;
+	margin-bottom: 10px;
+}
+
+.form-footer {
+	display: flex;
+  	justify-content: space-between;
+}
+
 .thumbnail img {
 	width: 100%;
 }
