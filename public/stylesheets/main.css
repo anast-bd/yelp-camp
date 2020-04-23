@@ -1,3 +1,20 @@
+/* html, body {
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+	padding-bottom: 4.0em;
+	padding-top: 7.0em;
+   	flex: 1 0 auto;
+} */
+
 .navbar-brand {
 	font-family: 'Montserrat';
 }
@@ -36,7 +53,6 @@
 	display: inline;
 }
 
-.footer {
-	z-index: 1;
-	padding: 0 0 10px 10px;
+.fixed-bottom {
+	background-color: #f8f8f8;
 }
