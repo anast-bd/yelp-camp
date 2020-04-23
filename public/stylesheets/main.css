@@ -53,6 +53,17 @@ body {
 	display: inline;
 }
 
-.fixed-bottom {
+.footer {
+	height: 50px;
 	background-color: #f8f8f8;
+}
+
+.footer__container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.footer__text {
+	margin: 0;
 }
