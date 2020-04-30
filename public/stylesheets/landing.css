@@ -1,5 +1,5 @@
 body {
-	background-color: #000;
+	background-color: #fff;
 }
 
 #landing-header {
@@ -74,6 +74,21 @@ body {
 	30% {
 		opacity: 0
 	}
+}
+
+.btn {
+	background-color: #9bc400;
+	border: none;
+	color: white;
+}
+
+.btn:active {
+  	background-color: #7c677f;
+	border: none;
+}
+
+.btn:hover{
+	color: white;
 }
 
 .footer {

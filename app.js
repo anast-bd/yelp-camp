@@ -19,7 +19,7 @@ var commentRoutes = require('./routes/comments'),
 
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v12";
 mongoose.connect (url, 
-{useNewUrlParser: true, useUnifiedTopology: true 
+{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
 	}).then(() => {
 		console.log('Connected to DB!');
 	}).catch(err => {
@@ -35,7 +35,7 @@ app.use(flash());
 
 //PASSPORT CONFIGURATION
 app.use(require('express-session')({
-	secret: "I'm kinda hopeless",
+	secret: "No",
 	resave: false,
 	saveUninitialized: false
 }));

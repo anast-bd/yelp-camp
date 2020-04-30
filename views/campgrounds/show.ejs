@@ -9,13 +9,13 @@
 				<li class='list-group-item'>Info 2</li>
 				<li class='list-group-item'>Info 3</li>
 			</div>
-			<!--MAP-->
+
 		</div>
 		<div class = 'col-md-9'>
-			<div class='thumbnail'>
-				<img class='img-responsive' src="<%= campground.image %>">
+			<!-- <div class='thumbnail'> -->
+				<img class='img-fluid' src="<%= campground.image %>">
 				<div class='caption-full'>
-					<h4 class='pull-right'>$9.00/night</h4>
+					<div class='price float-right'>$9.00/night</div>
 					<h4><a><%= campground.name %></a> </h4>
 					<p> <%= campground.description %> </p>
 					<p>
@@ -26,13 +26,12 @@
 						<form class='delete-form' action='/campgrounds/<%= campground._id %>?_method=DELETE' method='POST'>
 							<button class='btn btn-danger'> Delete </button>
 						</form>
+						<a class='btn btn-basic float-right' href='/campgrounds/<%= campground._id %>/comments/new'>Add New Comment</a>
 					<% }%>
 				</div>
-			</div>
+			<!-- </div> -->
 			<div class='well'>
-				<div class='text-right'>
-						<a class='btn btn-success' href='/campgrounds/<%= campground._id %>/comments/new'>Add New Comment</a>
-				</div>
+
 				<hr>
 				<% campground.comments.forEach((comment)=>{ %>
 					<div class='row'>

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router({mergeParams: true});
 var Campground = require('../models/campground');
+var Comment = require('../models/comment');
 var middleware = require('../middleware'); //index.js is always required automatically when we require the directory, containing it
 
 //INDEX - show all
@@ -14,7 +15,7 @@ router.get('/', (req, res)=>{
 	 });
 });
 
-//CERATE - add new
+//CREATE - add new
 router.post('/', middleware.isLoggedIn, (req, res) =>{
 	var name = req.body.name;
 	var image = req.body.image;

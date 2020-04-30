@@ -1,69 +1,122 @@
-/* html, body {
-	height: 100%;
-	margin:0;
-	padding:0;
-}
-
-body {
+body, html {
     display: flex;
     flex-direction: column;
+	height: 100%;
+}
+
+.header {
+   flex: 0 0 auto;
 }
 
 .wrapper {
-	padding-bottom: 4.0em;
-	padding-top: 7.0em;
+	/* padding-bottom: 4.0em; */
    	flex: 1 0 auto;
-} */
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.navbar {
+	border: none;
+	background-color: transparent;
+}
+
+.navbar li a {
+	color: #7c677f !important;
+}
 
 .navbar-brand {
 	font-family: 'Montserrat';
+	color: #7c677f !important;
+}
+
+.navbar-toggler-icon {
+	color: #7c677f;
+}
+
+.btn-basic {
+	background-color: #9bc400;
+	border: none;
+	color: white;
+}
+
+.btn-basic:active {
+  	background-color: #7c677f;
+	border: none;
+}
+
+.btn-basic:hover{
+	color: white;
 }
 
 .form-header{
 	text-align: center;
 	padding: 25px;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-style: bold;
 	font-family: 'Montserrat';
+	color: #7c677f;
 }
 
 .form-header__logo  {
-	font-size: 4.3rem;
+	font-size: 3rem;
 	margin-bottom: 10px;
 }
 
-.form-footer {
+.form-header__string {
+	font-size: 2rem;
+	color: #7c677f;
+}
+
+.form-footer{
 	display: flex;
   	justify-content: space-between;
 }
 
-.thumbnail img {
-	width: 100%;
+.form-footer a {
+	color: #7c677f;
 }
 
-.thumbnail {
+.jumbotron {
+	background: left bottom 17%;
+	background-size: cover;
+	background-image: url(https://images.unsplash.com/photo-1464547323744-4edd0cd0c746?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+	/* background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+	color: #eee;
+}
+
+.jumbotron-text {
+	font-size: 3rem;
+}
+
+.index-row {
+	padding: 0 1.5rem;
+}
+
+.card {
 	padding: 0;
 }
 
-.thumbnail .caption-full {
-	padding: 1em;
+.card-img-overlay {
+	color: white;
+	top: auto;
+	right: auto;
+}
+
+.card-title {
+	right: auto;
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0
+}
+
+.card-text {
+	right: auto;
+	margin: 0;
+	padding: 0
 }
 
 .delete-form {
 	display: inline;
-}
-
-.footer {
-	height: 50px;
-	background-color: #f8f8f8;
-}
-
-.footer__container {
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-
-.footer__text {
-	margin: 0;
 }
