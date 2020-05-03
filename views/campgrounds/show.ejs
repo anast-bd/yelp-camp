@@ -3,13 +3,7 @@
 <div class='container'>
 	<div class='row'>
 		<div class='col-md-3'>
-			<p class ='lead'>YelpCamp</p>
-			<div class ='list-group'>
-				<li class='list-group-item active'>Info 1</li>
-				<li class='list-group-item'>Info 2</li>
-				<li class='list-group-item'>Info 3</li>
-			</div>
-
+			<div id='map'></div>		
 		</div>
 		<div class = 'col-md-9'>
 			<!-- <div class='thumbnail'> -->
@@ -61,6 +55,27 @@
 	</div>
 </div>
 
-
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hc3QtYmQiLCJhIjoiY2s5cGx0dGg4MGJ2NzNkcWhoNWdrMmVpZSJ9.4SrqzF_fctN0WJVDDrFjXQ';
+	
+	var lat = <%= campground.lat %>;
+	var lng = <%= campground.lng %>;
+	var center = {lat: lat, lng: lng};
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v11',
+		center: [lng, lat],
+		zoom: 8
+	});
+	
+	var popup = new mapboxgl.Popup()
+    .setHTML('<h3><%= campground.name %></h3>');
+    
+    var marker = new mapboxgl.Marker()
+    .setLngLat([lng, lat])
+    .setPopup(popup)
+    .addTo(map);
+</script>
 
 <% include ../partials/footer %>
