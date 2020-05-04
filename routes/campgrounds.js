@@ -31,6 +31,7 @@ router.post('/', middleware.isLoggedIn, (req, res) =>{
 	var name = req.body.name;
 	var image = req.body.image;
 	var desc = req.body.description; //name attribute was set to
+	var price = req.body.price;
 	var author = {
 		id: req.user._id,
 		username: req.user.username
@@ -43,7 +44,7 @@ router.post('/', middleware.isLoggedIn, (req, res) =>{
 		var lat = data[0].latitude;
 		var lng = data[0].longitude;
 		var location = data[0].formattedAddress;
-		var newCampground = {name: name, image: image, description: desc, author: author, location: location, lat: lat, lng: lng};
+		var newCampground = {name: name, image: image, description: desc, price: price, author: author, location: location, lat: lat, lng: lng};
 		Campground.create(newCampground, (err, newlyCreated) => {
 			if (err) {
 				console.log(err);
@@ -53,15 +54,6 @@ router.post('/', middleware.isLoggedIn, (req, res) =>{
 			}
 		});
 	});
-		// .then(function(res) {
-		// 	// res is the http response, including: status, headers and entity properties
-		// 	var data = res.entity; // data is the geocoding result as parsed JSON
-		//   })
-		//   .catch(function(err) {
-		// 	// handle errors
-		//   });
-
-	//campgrounds.push(ne wCampground);
 })
 
 //NEW - show the form
