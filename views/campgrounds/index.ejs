@@ -18,7 +18,9 @@
 								<%= campground.name %>
 							</div>
 							<p class='card-text text-left'>
-								<%- campground.description.substring(0, 65) %>...
+								<!-- <%= campground.location.split(', ').slice(-2) %> -->
+								<% include ../partials/country-name-converter %>
+								<%= getCountryName(campground.location.split(', ').slice(-1))%>
 							</p>
 						</div>
 						<a class='stretched-link' href='/campgrounds/<%= campground._id %>'></a>
