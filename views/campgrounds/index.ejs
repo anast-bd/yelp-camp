@@ -18,7 +18,6 @@
 								<%= campground.name %>
 							</div>
 							<p class='card-text text-left'>
-								<!-- <%= campground.location.split(', ').slice(-2) %> -->
 								<% include ../partials/country-name-converter %>
 								<%= getCountryName(campground.location.split(', ').slice(-1))%>
 							</p>
