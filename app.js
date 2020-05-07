@@ -1,4 +1,7 @@
-require('dotenv').config(); // hide the geocode api
+if (process.env.NODE_ENV !== 'production')
+	{ 
+		require('dotenv').config(); // hide the geocode api 
+	}; 
 
 var express = require('express'),
 	request = require('request'),
