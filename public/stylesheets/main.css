@@ -50,9 +50,15 @@ body, html {
 	color: white;
 }
 
+.form-wrapper {
+	width: 30%; 
+	min-width: 330px; 
+	margin: 25px auto;
+}
+
 .form-header{
 	text-align: center;
-	padding: 25px;
+	padding: 25px 0 25px;
 	font-size: 1rem;
 	font-style: bold;
 	font-family: 'Montserrat';
