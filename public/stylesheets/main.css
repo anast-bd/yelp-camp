@@ -117,9 +117,14 @@ body, html {
 	padding: 0
 }
 
+.show-back a {
+	color: #7c677f;
+}
+
 #map {
 	height: 450px;
 }
+
 
 .delete-form {
 	display: inline;
